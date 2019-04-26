@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Ninject" Version="3.3.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rodes.FileKeeper\Rodes.FileKeeper.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Eventual.Common">
+      <HintPath>..\..\..\Eventual Framework\source\Eventual.Common\bin\Debug\netstandard2.0\Eventual.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Eventual.EventStore">
+      <HintPath>..\..\..\Eventual Framework\source\Eventual.EventStore\bin\Debug\netstandard2.0\Eventual.EventStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Eventual.EventStore.EntityFrameworkCore">
+      <HintPath>..\..\..\Eventual Framework\source\Eventual.EventStore.EntityFrameworkCore\bin\Debug\netstandard2.0\Eventual.EventStore.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Eventual.EventStore.Serialization.Json">
+      <HintPath>..\..\..\Eventual Framework\source\Eventual.EventStore.Serialization.Json\bin\Debug\netstandard2.0\Eventual.EventStore.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="testhost.dll.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
